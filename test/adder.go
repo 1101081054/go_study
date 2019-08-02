@@ -4,6 +4,7 @@ import (
 	"fmt"
 )
 
+
 func adder() func(int) int {
 	sum := 0
 	return func(v int) int {
