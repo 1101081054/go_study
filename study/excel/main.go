@@ -34,7 +34,6 @@ func imageList() [17]string {
 
 func main() {
 	var images [17]string  = imageList()
-
 	xlsx, err := excelize.OpenFile("imports.xlsx")
 	if err != nil {
 		fmt.Println(err)
