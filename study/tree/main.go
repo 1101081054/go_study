@@ -1,6 +1,6 @@
 package main
 
-import "www/study/tree/tree"
+import "www/go_study/study/tree/tree"
 
 func main() {
 	var node tree.Node
