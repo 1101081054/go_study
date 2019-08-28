@@ -34,21 +34,22 @@ func imageList() [17]string {
 
 func main() {
 	var images [17]string  = imageList()
-	xlsx, err := excelize.OpenFile("imports.xlsx")
+	xlsx, err := excelize.OpenFile("D:/MyGO/go/src/www/go_study/study/excel/2222.xlsx")
 	if err != nil {
 		fmt.Println(err)
 		os.Exit(1)
 	}
+
 	time := time.Now().Unix()
 	//os.Exit(1)
 	fmt.Println(`<?xml version="1.0" encoding="UTF-8"?>`)
 
 	fmt.Print("<dataset>")
-	for i := 2; i <= 201; i++ {
-		id, _ := xlsx.GetCellValue("Sheet1", "A"+strconv.Itoa(i))
-		province, _ := xlsx.GetCellValue("Sheet1", "B"+strconv.Itoa(i))
-		name, _ := xlsx.GetCellValue("Sheet1", "C"+strconv.Itoa(i))
-		address, _ := xlsx.GetCellValue("Sheet1", "D"+strconv.Itoa(i))
+	for i := 3; i <= 139; i++ {
+		id, _ := xlsx.GetCellValue("Sheet1", "F"+strconv.Itoa(i))
+		province, _ := xlsx.GetCellValue("Sheet1", "E"+strconv.Itoa(i))
+		name, _ := xlsx.GetCellValue("Sheet1", "G"+strconv.Itoa(i))
+		address, _ := xlsx.GetCellValue("Sheet1", "H"+strconv.Itoa(i))
 
 		fmt.Print(`
 	<data>
